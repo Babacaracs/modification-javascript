@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Redimentionnement</title>
+</head>
+<body  onkeydown="touche(event)" onkeyup="retour(event)">
+
+	<p onclick="sp()" id="sp" style="font-size: 40px"> Test</p>
+
+	<center>
+		<div id="rect" style="height:100px; width: 100px; border: 1px solid blue;background-color: blue"></div></center>
+	<br>
+
+	<center>
+	<button onclick="b1()">bouton1</button>
+	<button onclick="b2()">bouton2</button>
+	<button onclick="b3()">bouton3</button>
+	<button onclick="b4()">bouton4</button>
+	<button onclick="b5()">bouton5</button>
+	</center>
+	
+
+	<script type="text/javascript">
+
+		
+		var spa = document.getElementById('sp');
+		var rect = document.getElementById('rect');
+		var i=0;
+		var a=100;
+		var b=10;
+
+		function sp()
+		 {	
+		
+		if (i==0) 
+			{spa.style.fontSize="100px";
+			i=1;
+		  }
+
+		else if(i==1){
+		spa.style.fontSize="40px";
+		i=0;
+		}
+
+		 }
+		
+		function spa1()
+		
+		 {
+		 	spa.style.fontSize="200px";
+		 }
+
+		function b1()
+		
+		 {
+		 	if(a<300)
+		 	{	a+=10;
+		 	rect.style.height=a+"px";
+		 	
+		 	
+		 	}
+		 	else
+
+		 	{
+		 	rect.style.height="100px";
+		 	
+		 	}
+		
+
+		 }
+
+
+		 function b2()
+		
+		 {
+		 	rect.style.backgroundColor="green";
+
+		 }
+		  function b3()
+		
+		 {
+		 	rect.style.backgroundColor="blue";
+
+		 }
+		  function b4()
+		
+		 {
+		 	rect.style.visibility="hidden";
+
+		 }
+
+		 function b5()
+		
+		 {
+		 	rect.style.visibility="visible";
+
+		 }
+		
+		
+
+function touche(event){
+
+var touche = event.keyCode;
+
+if (touche==38) {
+//x=200;
+//alert('Vous avez appuyé sur '+touche);
+rect.style.position="relative"
+rect.style.bottom="100px";
+rect.style.transition="1s"
+//rect.style.bottom="00px";
+
+}
+}
+
+function retour(event){
+
+var touche = event.keyCode;
+
+if (touche==38) {
+//x=200;
+//alert('Vous avez lacher sur '+touche);
+rect.style.position="relative"
+rect.style.bottom="000px";
+}
+}
+
+
+
+		
+		 	
+
+	</script>
+
+</body>
+</html>
