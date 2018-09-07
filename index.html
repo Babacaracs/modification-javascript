@@ -5,10 +5,13 @@
 </head>
 <body  onkeydown="touche(event)" onkeyup="retour(event)">
 
-	<p onclick="sp()" id="sp" style="font-size: 40px"> Test</p>
-
+	<center>	
+		<span onclick="sp()" id="sp" style="font-size: 40px"> Test</span>
+	</center>
+<br><br>
 	<center>
-		<div id="rect" style="height:100px; width: 100px; border: 1px solid blue;background-color: blue"></div></center>
+		<div id="rect" style="height:100px; width: 100px; border: 1px solid blue;background-color: blue"></div>
+	</center>
 	<br>
 
 	<center>
@@ -107,7 +110,7 @@ if (touche==38) {
 //alert('Vous avez appuyé sur '+touche);
 rect.style.position="relative"
 rect.style.bottom="100px";
-rect.style.transition="1s"
+
 //rect.style.bottom="00px";
 
 }
@@ -122,8 +125,11 @@ if (touche==38) {
 //alert('Vous avez lacher sur '+touche);
 rect.style.position="relative"
 rect.style.bottom="000px";
+rect.style.transition="0.5s";
 }
 }
+
+
 
 
 
